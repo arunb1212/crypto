@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { CoinCon } from '../../Context/CoinContext'
 import { Link } from 'react-router'
 
 const Nsv = () => {
-
+let[active,setActive]=useState("Home")
     let {setcurr}=useContext(CoinCon)
 
 
@@ -40,11 +40,12 @@ switch (e.target.value) {
        </Link> 
 
         <div>
-            <ul className='cursor-pointer flex text-white text-[18px] justify-center gap-[10px]'>
-            <Link to={"/"}> <li>Home</li></Link>   
-                <li>Pricing</li>
-                <li>Features</li>
-                <li>Blogs</li>
+            <ul className='cursor-pointer text-gray-400 flex   text-[18px] justify-center gap-[10px]'>
+            <Link to={"/"}> 
+            <li onClick={()=>setActive("Home")} className={active==="Home"?`text-white`:" hover:text-white"} >Home</li></Link>   
+                <li onClick={()=>setActive("Pricing")} className={active==="Pricing"?`text-white hover:text-white`:"hover:text-white"}>Pricing</li>
+                <li onClick={()=>setActive("Features")} className={active==="Features"?`text-white hover:text-white`:"hover:text-white"}>Features</li>
+                <li onClick={()=>setActive("Blogs")} className={active==="Blogs"?`text-white`:"hover:text-white"}>Blogs</li>
             </ul>
 
         </div>
