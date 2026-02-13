@@ -1,25 +1,17 @@
-import React from 'react'
-import { FaChartColumn } from "react-icons/fa6";
+import React from 'react';
 
-
-const Features = ({para,logo}) => {
+const Features = ({ para, logo }) => {
   return (
-    <div >        
-        <div className='flex w-[300px] flex-col  items-center  p-[10px] rounded-xl bg-[#433283]  text-center border'>
-            <div className='scale-[2] mt-[10px] mb-[10px]'>
-                {
-                    logo 
-                }
-            </div>
-{/* <FaChartColumn className='scale-[2] mt-[10px] mb-[10px]'/> */}
-<p className='font-bold mb-[10px]'>{para}</p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptatibus assumenda exercitationem dolor perferendis alias.</p>
+    <div className="flex flex-col items-center p-8 rounded-2xl bg-slate-800/50 backdrop-blur-sm border border-slate-700 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:-translate-y-2 group shadow-xl hover:shadow-purple-500/10">
+      <div className="mb-6 p-4 rounded-full bg-slate-700/50 group-hover:bg-purple-900/30 transition-colors duration-300">
+        {logo}
+      </div>
+      <h3 className="text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors">{para}</h3>
+      <p className="text-gray-400 text-center text-sm leading-relaxed">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis voluptatibus assumenda exercitationem.
+      </p>
+    </div>
+  );
+};
 
-        
-        </div>
-        
-        </div>
-  )
-}
-
-export default Features
+export default Features;

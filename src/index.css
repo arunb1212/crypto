@@ -1,10 +1,42 @@
 @import "tailwindcss";
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
-
-*{
-  font-family: poppins;
+:root {
+  --color-primary: #6d28d9;
+  --color-secondary: #4c1d95;
+  --color-accent: #8b5cf6;
+  --color-dark: #0f172a;
+  --color-light: #f8fafc;
 }
+
+* {
+  font-family: 'Outfit', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569; 
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b; 
+}
+
